@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="components/supersonic/css/supersonic.css" />
+    <link rel="import" href="components/supersonic/components/import.html">
+
+    <script type="text/javascript">
+      window.cordova = window.parent.cordova
+    </script>
+
+    <script src="components/handlebars/handlebars.min.js"></script>
+
+    <script src="components/steroids-js/steroids.js"></script>
+    <script src="components/supersonic/supersonic.js"></script>
+    <script src="components/webcomponentsjs/webcomponents.js"></script>
+
+    <script src="module.js"></script>
+
+    <style>
+      body {
+        padding: 1em;
+      }
+
+      #loading {
+        width: 180px;
+        height: 180px;
+        line-height: 176px;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .hidden {
+        display:none;
+      }
+    </style>
+
+    <script id="detail-record-template" type="text/x-handlebars-template">
+      <div class="list">
+        {{#each list}}
+        <div class="item item-divider">
+          {{this.title}}
+        </div>
+        <div class="item">
+          {{this.value}}
+        </div>
+        {{/each}}
+      </div>
+    </script>
+  </head>
+
+  <body>
+    <div id="loading">
+      <img src="components/svg-loaders/svg-loaders/grid.svg" />
+    </div>
+    <div id="errorMessage" class="hidden"></div>
+    <div id="content" class="hidden"></div>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "base-module",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "supersonic": "1.x",
+    "handlebars": "~3.0.3",
+    "svg-loaders": "~1.0.2"
+  }
+}
