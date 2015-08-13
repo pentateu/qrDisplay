@@ -45,9 +45,13 @@ class QRDisplayModule
 
   getResourceInfo: => @attrToJson "resource-info"
 
+  showLoadingMessage: (msg) => document.querySelector("#loadingMessage").innerText = msg
+
   #TODO: handle invalid id and record not found
   loadRecordData: (recordId, resourceInfo, fieldLabels) =>
     model = supersonic.data.model resourceInfo.resource
+
+    @showLoadingMessage "Loading record details..."
 
     model.find(recordId)
       .then @detailRecord(resourceInfo.fields, fieldLabels)

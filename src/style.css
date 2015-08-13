@@ -3,12 +3,14 @@ body {
 }
 
 #loading {
-  width: 180px;
-  height: 180px;
-  line-height: 176px;
   text-align: center;
-  background-repeat: no-repeat;
-  background-position: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+#loadingMessage{
+  text-align: center;
+  padding-top: 10px;
 }
 
 .hidden {
