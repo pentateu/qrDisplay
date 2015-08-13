@@ -1,0 +1,16 @@
+body {
+  padding: 1em;
+}
+
+#loading {
+  width: 180px;
+  height: 180px;
+  line-height: 176px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hidden {
+  display:none;
+}

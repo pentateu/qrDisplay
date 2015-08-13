@@ -2,9 +2,15 @@ hide = (query) -> () -> document.querySelector(query).className = "hidden"
 
 show = (query) -> () -> document.querySelector(query).className = ""
 
-debug = (msg) -> console.log "QRDisplayModule - DEBUG: #{msg}"
+debug = (msg) -> supersonic.logger.debug "QRDisplayModule: #{msg}"
 
 class QRDisplayModule
+
+  @constructor: ->
+    supersonic.data.channel('QRDisplay-show').subscribe (recordId) ->
+      resourceInfo = @getResourceInfo()
+      debug "channel handler() recordId: #{recordId} resourceInfo: #{JSON.stringify(resourceInfo)}"
+      @loadRecordData recordId, resourceInfo unless @invalidParameters recordId, resourceInfo
 
   hideLoading: hide("#loading")
   showLoading: show("#loading")
@@ -25,7 +31,7 @@ class QRDisplayModule
     @showError()
 
   handleLoadError: (resource) -> (error) =>
-    showErrorMessage "An error occourred while trying to load data for resource: #{resource}. Description: #{error}"
+    @showErrorMessage "An error occourred while trying to load data for resource: #{resource}.\n Description: #{error}"
     @hideLoading()
     @showError()
 
@@ -39,6 +45,7 @@ class QRDisplayModule
 
   getResourceInfo: => @attrToJson "resource-info"
 
+  #TODO: handle invalid id and record not found
   loadRecordData: (recordId, resourceInfo, fieldLabels) =>
     model = supersonic.data.model resourceInfo.resource
 
@@ -58,9 +65,13 @@ class QRDisplayModule
   start: =>
     recordId = supersonic.module.attributes.get "id"
     resourceInfo = @getResourceInfo()
-    #fieldLabels = @getFieldLabels()
+
     debug "start() recordId: #{recordId} resourceInfo: #{JSON.stringify(resourceInfo)}"
 
     @loadRecordData recordId, resourceInfo unless @invalidParameters recordId, resourceInfo
+
+    #TODO: remove this test below
+    someTest = supersonic.module.attributes.get "someTest"
+    alert "This attribute should come as a parameter: #{someTest}"
 
 document.addEventListener "DOMContentLoaded", new QRDisplayModule().start
