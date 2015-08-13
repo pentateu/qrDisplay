@@ -36,10 +36,11 @@ class QRDisplayModule
     @showError()
 
   attrToJson: (attributeName) =>
+    attributeValue = supersonic.module.attributes.get attributeName
     try
-      return JSON.parse supersonic.module.attributes.get(attributeName)
+      return JSON.parse attributeValue
     catch error
-      @showErrorMessage "Could not parse the attribute: #{attributeName}! Error: #{error}"
+      @showErrorMessage "Could not parse the attribute: #{attributeName} value: #{attributeValue} - Error: #{error}"
 
   getFieldLabels: => @attrToJson "field-labels"
 
@@ -60,10 +61,10 @@ class QRDisplayModule
       .catch(@handleLoadError(resourceInfo.resource))
 
   invalidParameters: (recordId, resourceInfo) ->
-    if recordId? && resourceInfo?
+    if recordId? && recordId != "" && resourceInfo? && resourceInfo != ""
       false
     else
-      @showErrorMessage "Required parameters not provided!"
+      @showErrorMessage "Required parameters not provided! recordId: #{recordId} resourceInfo: #{resourceInfo}"
       true
 
   start: =>
