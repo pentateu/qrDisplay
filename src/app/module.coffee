@@ -47,7 +47,7 @@ class QRDisplayModule
 
   showLoadingMessage: (msg) => document.querySelector("#loadingMessage").innerText = msg
 
-  #TODO: handle invalid id and record not found
+  #TODO: handle invalid id and record not found scenarios
   loadRecordData: (recordId, resourceInfo, fieldLabels) =>
     model = supersonic.data.model resourceInfo.resource
 
@@ -73,9 +73,5 @@ class QRDisplayModule
     debug "start() recordId: #{recordId} resourceInfo: #{JSON.stringify(resourceInfo)}"
 
     @loadRecordData recordId, resourceInfo unless @invalidParameters recordId, resourceInfo
-
-    #TODO: remove this test below
-    someTest = supersonic.module.attributes.get "someTest"
-    alert "This attribute should come as a parameter: #{someTest}"
 
 document.addEventListener "DOMContentLoaded", new QRDisplayModule().start
