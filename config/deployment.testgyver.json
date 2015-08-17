@@ -4,20 +4,20 @@
   "versions": [
     {
       "id": 58,
-      "version": "12",
+      "version": "16",
       "owner_id": 22179,
-      "module_zip_last_uploaded_at": "2015-08-13T10:23:11.305Z",
+      "module_zip_last_uploaded_at": "2015-08-17T03:32:31.720Z",
       "module_zip_upload_instructions": {
         "key": "uploads/web_component/module_zip/d13275d2-21d1-4861-b6b7-ad625b57d0d5/module.zip",
         "AWSAccessKeyId": "AKIAJRYKEBFFELDDWFSA",
         "acl": "public-read",
-        "policy": "eyJleHBpcmF0aW9uIjoiMjAxNS0wOC0xM1QyMDoyMzoxNC45NTFaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwidXBsb2Fkcy93ZWJfY29tcG9uZW50L21vZHVsZV96aXAvZDEzMjc1ZDItMjFkMS00ODYxLWI2YjctYWQ2MjViNTdkMGQ1L21vZHVsZS56aXAiXSx7ImJ1Y2tldCI6InRlc3RneXZlci1tb2R1bGVzIn0seyJhY2wiOiJwdWJsaWMtcmVhZCJ9LHsic3VjY2Vzc19hY3Rpb25fcmVkaXJlY3QiOm51bGx9LHsieC1hbXotbWV0YS1tb2R1bGUtaWQiOiI1OCJ9LHsieC1hbXotbWV0YS1tb2R1bGUtdmVyc2lvbiI6IjEyIn0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMSw1MjQyODgwXV19",
-        "signature": "dGVEKD5rTNqfBO6EUldYXRVuPWs=",
+        "policy": "eyJleHBpcmF0aW9uIjoiMjAxNS0wOC0xN1QxMzozMjozNS41NzJaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkdXRmOCIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwidXBsb2Fkcy93ZWJfY29tcG9uZW50L21vZHVsZV96aXAvZDEzMjc1ZDItMjFkMS00ODYxLWI2YjctYWQ2MjViNTdkMGQ1L21vZHVsZS56aXAiXSx7ImJ1Y2tldCI6InRlc3RneXZlci1tb2R1bGVzIn0seyJhY2wiOiJwdWJsaWMtcmVhZCJ9LHsic3VjY2Vzc19hY3Rpb25fcmVkaXJlY3QiOm51bGx9LHsieC1hbXotbWV0YS1tb2R1bGUtaWQiOiI1OCJ9LHsieC1hbXotbWV0YS1tb2R1bGUtdmVyc2lvbiI6IjE2In0sWyJjb250ZW50LWxlbmd0aC1yYW5nZSIsMSw1MjQyODgwXV19",
+        "signature": "7eZHOEPEbwJgYdBO4Z6FcFBdEk8=",
         "success_action_status": null,
         "utf8": "",
         "metadata": {
           "x-amz-meta-module-id": "58",
-          "x-amz-meta-module-version": "12"
+          "x-amz-meta-module-version": "16"
         },
         "__endpoint": "https://testgyver-modules.s3.amazonaws.com"
       },

@@ -5,6 +5,6 @@
   "dependencies": {
     "supersonic": "1.x",
     "handlebars": "~3.0.3",
-    "svg-loaders": "~1.0.2"
+    "qrcodejs": "~0.1.0"
   }
 }

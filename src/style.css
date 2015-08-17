@@ -2,10 +2,8 @@ body {
   padding: 1em;
 }
 
-#loading {
+#qrcode {
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 10px;
 }
 
 #loadingMessage{

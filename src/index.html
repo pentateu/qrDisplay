@@ -8,6 +8,8 @@
       window.cordova = window.parent.cordova
     </script>
 
+    <script src="components/qrcodejs/qrcode.min.js"></script>
+
     <script src="components/handlebars/handlebars.min.js"></script>
 
     <script src="components/steroids-js/steroids.js"></script>
@@ -16,26 +18,11 @@
 
     <script src="module.js"></script>
 
-    <script id="detail-record-template" type="text/x-handlebars-template">
-      <div class="list">
-        {{#each list}}
-        <div class="item item-divider">
-          {{this.title}}
-        </div>
-        <div class="item">
-          {{this.value}}
-        </div>
-        {{/each}}
-      </div>
-    </script>
   </head>
 
   <body>
-    <div id="loading">
-      <img src="components/svg-loaders/svg-loaders/grid.svg" />
-      <p id="loadingMessage"></p>
-    </div>
     <div id="errorMessage" class="hidden"></div>
-    <div id="content" class="hidden"></div>
+    <div id="qrcode">
+    </div>
   </body>
 </html>
